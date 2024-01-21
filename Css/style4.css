@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=ZCOOL+KuaiLe&display=swap');
+
+/*-----hee---*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body{
+    background-color: #f2f3f7;
+    overflow: hidden;
+}
+
+.wrapper{
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    background: #f5f5f5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 30px 50px #dbdbdb;
+
+}
+
+.wrapper .slide .card{
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 30px 50px #505050;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+.wrapper .slide .card:nth-child(1){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.slide .card:nth-child(2){
+    left: 50%;
+}
+
+.slide .card:nth-child(3){
+    left: calc(50% + 220px);
+}
+
+.slide .card:nth-child(4){
+    left: calc(50% + 440px);
+}
+
+.slide .card .content{
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    text-align: left;
+    display: none;
+    color: white;
+}
+
+.slide .card:nth-child(1) .content{
+    display: block;
+}
+
+.slide .card:nth-child(1) .content1{
+    display: block;
+}
+
+
+.card .content .title{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: anim 1s ease-in-out forwards;
+}
+
+.card .content .decs {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    opacity: 0;
+    animation: anim 1s ease-in-out 0.3s 1 forwards;
+}
+
+.card .content .h1 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    opacity: 0;
+    animation: anim 1s ease-in-out forwards;
+}
+
+.slide .card .content1 {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    text-align: left;
+    display: none;
+
+}
+
+.card .content1 .title{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: anim 1s ease-in-out forwards;
+}
+
+.card .content1 .decs {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    opacity: 0;
+    animation: anim 1s ease-in-out 0.3s 1 forwards;
+}
+
+.card .content1 .h1 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    opacity: 0;
+    animation: anim 1s ease-in-out forwards;
+}
+
+
+@keyframes anim{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.wrapper .btns {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+}
+
+.btns button{
+    width: 40px;
+    height: 35px;
+    margin: 0 5px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btns button:hover{
+    background: rgb(136, 206, 252);
+    color: #fff;
+}
+
+.wrapper .home{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    text-align:right;
+    right: 30px;
+}
+
+.home a{
+    width: 40px;
+    height: 35px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #f2f3f7;
+}
+
+.home a:hover{
+    background: #00bcd4;
+    padding: 5px 5px;
+    border-radius: 20%;
+}
+
+.wrapper .logo{
+    position: absolute;
+    text-align:left;
+    left: 30px;
+}
+
+.logo{
+    width: 80px;
+    height: 70px;
+    margin:5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #f2f3f7;
+}
